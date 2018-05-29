@@ -2,11 +2,11 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://shidonghua.work
+url: https://shidonghua.work
 date_format: "ordinal"
 title: 石头记
 subtitle: "我是一颗小小的石头，深深的埋在泥土之中～"
-description: "石东华的个人博客"
+description: "老实说"
 keywords: Stone, shidongwa, shidonghua, 石东华
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 author: Shi Donghua
 organization: shidonghua.work
-organization_url: http://shidonghua.work
+organization_url: https://shidonghua.work
 github_username: shidongwa
 location: Shanghai, China
 email: 10189795@qq.com
