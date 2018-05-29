@@ -49,9 +49,36 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 其实Spring LDAP本身就支持这种认证方式。这里就要区别```BindAuthenticator``` 和 ```PasswordComparisonAuthenticator```。上面的就是PasswordComparisonAuthenticator方式。那么怎么让WebSecurityConfigurerAdapter支持BindAuthenticator呢？
 
-很简单，去掉上面passwordCompare这段代码就会应用BindAuthenticator。而且上面的配置中并不需要提及userPassword。因为BindAuthenticator会中上下文中的authentication对象中获取。Authentication会从basic auth popup form中获取用户名，密码信息。
+很简单，去掉上面passwordEncoder就会应用BindAuthenticator。而且上面的配置中并不需要提及userPassword。因为BindAuthenticator会中上下文中的authentication对象中获取。Authentication会从basic auth popup form中获取用户名，密码信息。
 
 相关逻辑参考spring 源码如下：
 
 ```java
+
+    @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .ldapAuthentication(); // 入口处
+	}
+
+		/**
+	 * Creates the {@link LdapAuthenticator} to use
+	 *
+	 * @param contextSource the {@link BaseLdapPathContextSource} to use
+	 * @return the {@link LdapAuthenticator} to use
+	 */
+	private LdapAuthenticator createLdapAuthenticator(
+			BaseLdapPathContextSource contextSource) {
+		AbstractLdapAuthenticator ldapAuthenticator = passwordEncoder == null ? createBindAuthenticator(contextSource)
+				: createPasswordCompareAuthenticator(contextSource); ·
+		LdapUserSearch userSearch = createUserSearch();
+		if (userSearch != null) {
+			ldapAuthenticator.setUserSearch(userSearch);
+		}
+		if (userDnPatterns != null && userDnPatterns.length > 0) {
+			ldapAuthenticator.setUserDnPatterns(userDnPatterns);
+		}
+		return postProcess(ldapAuthenticator);
+	}
+
 ```
