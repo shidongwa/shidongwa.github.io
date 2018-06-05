@@ -25,3 +25,8 @@ mysql有异步复制，半同步复制，组复制等。
 ![单主](https://github.com/shidongwa/shidongwa.github.io/blob/master/images/group_repl_single_master.png?raw=true)
 
 ![多主](https://github.com/shidongwa/shidongwa.github.io/blob/master/images/group_repl_multi_master.png?raw=true)
+
+### 参考
+http://blog.51cto.com/ylw6006/1971139
+
+斩月是个神人，最早接触TFS（Taobao File System）就是看他的博客开始的。
