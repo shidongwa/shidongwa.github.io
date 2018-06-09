@@ -117,4 +117,4 @@ categories: [COW]
 ```
 
 ## 参考
-http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/concurrent/CopyOnWriteArrayList.java#CopyOnWriteArrayList
+[grepCode](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/concurrent/CopyOnWriteArrayList.java#CopyOnWriteArrayList)
