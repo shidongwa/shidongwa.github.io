@@ -5,7 +5,7 @@ baseurl:
 url: https://shidonghua.work
 date_format: "ordinal"
 title: 老实说
-subtitle: ""
+# subtitle: ""
 description: "石头记"
 keywords: Stone, shidongwa, shidonghua, 石东华
 timezone: Asia/Shanghai
