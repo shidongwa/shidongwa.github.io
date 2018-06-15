@@ -1,7 +1,7 @@
 ---
 title: Kafka吞吐量高的原因
 date: 2017-04-22 17:32:31 Z
-categories: middleware
+categories: [kafka,middleware]
 layout: post
 ---
 摘自：[阿里云测试](https://yq.aliyun.com/articles/67003?spm=5176.8269312.601338.12.cLRfQp)

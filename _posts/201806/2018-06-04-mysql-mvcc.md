@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mysql mvcc介绍
-categories: [mysql mvcc]
+categories: [mysql,mvcc]
 ---
 ## mysql mvcc介绍
 
