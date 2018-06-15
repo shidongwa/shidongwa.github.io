@@ -1,12 +1,11 @@
 ---
 title: lazy loading实现
-date: 2017-02-18 18:39:32 Z
-categories:
-- iteye
+categories: [iteye, lazy initialization]
 layout: post
 ---
+在进行O-R mapping时经常会碰到加载a graph of objects. 这是lazy loading应用的场景。你不想把所有数据库中关联的表对象都一次性load到内存吧?
 
-在进行O-R mapping时经常会碰到加载a graph of objects. 这是lazy loading应用的场景。你不想把所有数据库中关联的表对象都一次性load到内存吧？   可用的方法有： 
+常见解决方法如下。
 
 ### lazy initialization
 简单来说就是使用前判断目标对象是否为null，是则真正从数据库加载。缺点是非null时并不总是代表对象加载了。还有一个缺点是domain类中加入了调用数据库的逻辑。  

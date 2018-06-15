@@ -1,12 +1,10 @@
 ---
-title: 架构考虑的
-date: 2017-02-18 18:36:32 Z
-categories:
-- iteye
+title: non-functional requirement
+categories: [iteye, 架构需求]
 layout: post
 ---
+架构设计中考量的是Non Functional factors。
 
-考量的是Non Functional factors, 其中有：  
 ### Response Time     
 处理一次请求的时间或者平均时间   
 
