@@ -5,7 +5,7 @@ baseurl:
 url: https://shidonghua.work
 date_format: "ordinal"
 title: 老实说
-subtitle: "我是一颗小小的石头，深深的埋在泥土之中～"
+subtitle: ""
 description: "石头记"
 keywords: Stone, shidongwa, shidonghua, 石东华
 timezone: Asia/Shanghai
@@ -34,9 +34,9 @@ navs:
     href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
+  -
+     href: /archives/
+     label: 归档
 
   -
     href: /wiki/
@@ -70,12 +70,12 @@ permalink: /:year/:month/:day/:title/
 gems:
     - jekyll-github-metadata
     - rouge
-#     - jekyll-html-pipeline
+    - jekyll-html-pipeline
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
     - jemoji
-#     - jekyll-mentions
+     - jekyll-mentions
 collections:
     wiki:
         output: true
