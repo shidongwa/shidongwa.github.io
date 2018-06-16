@@ -1,19 +1,17 @@
 ---
 title: cluster nad non-cluster index
-date: 2017-02-15 18:32:32 Z
-categories:
-- iteye
+categories: [index, database]
 layout: post
+excerpt_separator: <!--more-->
 ---
-
-There are clustered and nonclustered indexes. 
+clustered and nonclustered indexes <!--more-->
 
 A clustered index is a special type of index that reorders the way records in the table are physically stored. Therefore table can have only one clustered index. The leaf nodes of a clustered index contain the data pages. 
 
 A nonclustered index is a special type of index in which the logical order of the index does not match the physical stored order of the rows on disk. The leaf node of a nonclustered index does not consist of the data pages. Instead, the leaf nodes contain index rows.   
 
 CLUSTER是段的一种类型。一个聚簇就是一个段，聚簇中的所有表根据聚簇列存放在同一个段中。这些表具有相同的物理存储结构。CLUSTER的主要优点包括： 
-+ 由于不同表的数据根据CLUSTER键的顺序存放在以前，因此当对CLUSTER表之间连接访问时，会减少IO和存储访问时间；   
++ 由于不同表的数据根据CLUSTER键的顺序存放在一起，因此当对CLUSTER表之间连接访问时，会减少IO和存储访问时间；   
 + 虽然每个表都包含CLUSTER键，但这一列在CLUSTER中保存一份。因此可以减少存储的空间。   
 
 适合CLUSTER的表的特点：   
