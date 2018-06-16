@@ -1,5 +1,5 @@
 ---
-title: lazy loading实现
+title: "lazy loading实现"
 categories: [iteye, lazy initialization]
 layout: post
 ---
