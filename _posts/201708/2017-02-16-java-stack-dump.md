@@ -1,10 +1,10 @@
 ---
 title: 如何简单的得到Java进程的stack trace dump
-date: 2017-02-16 21:32:32 Z
-categories:
-- iteye
+categories: [iteye, java]
 layout: post
+excerpt_separator: <!--more-->
 ---
+如何简单的得到Java进程的stack trace dump<!--more-->
 
 最简单直接变态的方法是：找到这个java进程的id（linux下的ps或者windows下的jps），直接kill掉。
 

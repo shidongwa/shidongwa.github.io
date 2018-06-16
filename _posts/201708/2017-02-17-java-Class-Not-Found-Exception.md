@@ -1,12 +1,10 @@
 ---
 title: ClassNotFoundException and NoClassDefFoundError
-date: 2017-02-17 20:42:32 Z
-categories:
-- iteye
+categories: [iteye, java]
 layout: post
+excerpt_separator: <!--more-->
 ---
-
-------
+ClassNotFoundException and NoClassDefFoundError<!--more-->
 
 From: http://jroller.com/sjivan/entry/difference_between_classnotfoundexception_and_noclassdeffounderror
 

@@ -1,14 +1,12 @@
 ---
 title: OpenID and OAuth
-date: 2017-02-18 18:33:32 Z
-categories:
-- iteye
+categories: [iteye,openid,oauth]
 layout: post
+excerpt_separator: <!--more-->
 ---
+OpenID and OAuth <!--more-->
 
 From http://cakebaker.42dh.com/2008/04/01/openid-versus-oauth-from-the-users-perspective/
-
-___
 
 In this article I want to show the differences between OpenID and its younger cousin OAuth by providing for each a typical user scenario.
 

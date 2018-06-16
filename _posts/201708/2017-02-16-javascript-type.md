@@ -1,10 +1,10 @@
 ---
 title: Javascript 数据类型和值
-date: 2017-02-16 22:02:32 Z
-categories:
-- iteye
+categories: [iteye, javascript]
 layout: post
+excerpt_separator: <!--more-->
 ---
+Javascript 类型 <!--more-->
 
 + 五个基本类型（primitive data type) 
     - number，特殊的是NaN，Infinity，-Infinity。 NaN（Not a Number)实际上还是Number类型 

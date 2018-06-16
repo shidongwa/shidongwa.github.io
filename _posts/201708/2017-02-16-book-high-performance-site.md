@@ -1,10 +1,10 @@
 ---
 title: 构建高性能Web站点读后
-date: 2017-02-16 21:35:32 Z
-categories:
-- iteye
+categories: [iteye, 高性能]
 layout: post
+excerpt_separator: <!--more-->
 ---
+构建高性能Web站点读后<!--more-->
 
 - 数据库层主要查询建索引,一个是全表扫描，一个是常量时间。通过explain 查询语句就知道了   
 - 通过memcached分布式缓存减少数据库或者磁盘文件IO,原则是把数据缓存到离使用者最近的地方   
