@@ -3,8 +3,7 @@ title: "lazy loading实现"
 categories: [iteye, lazy initialization]
 layout: post
 ---
-在进行O-R mapping时经常会碰到加载a graph of objects. 这是lazy loading应用的场景。你不想把所有数据库中关联的表对象都一次性load到内存吧?
-
+在进行O-R mapping时经常会碰到加载a graph of objects. 这是lazy loading应用的场景。你不想把所有数据库中关联的表对象都一次性load到内存吧?\n\n
 
 常见解决方法如下。
 

@@ -2,8 +2,9 @@
 title: "架构 - 非功能性需求"
 categories: [iteye, 架构需求]
 layout: post
+excerpt_separator: <!--more-->
 ---
-# 架构设计中考量的是Non Functional factors
+架构设计中考量的是Non Functional factors <!--more-->
 
 
 ### Response Time     
