@@ -6,17 +6,80 @@ excerpt_separator: <!--more-->
 ---
 Java ClassLoader<!--more-->
 
-学习ClassLoader有几个关注点： From: http://www.ibm.com/developerworks/cn/java/j-lo-classloader/index.html    
+# 调用自定义ClassLoader
 
-### java.lang.ClassLoader 中的关键方法
+```java
+public class ClassLoaderTest {
+    public static void main(String[] args) {
+        MyClassLoader cl1 = new MyClassLoader();
 
-方法说明 
-+ getParent() 返回该类加载器的父类加载器。 
-+ loadClass(String name) 加载名称为 name 的类，返回的结果是 java.lang.Class 类的实例。 
-+ findClass(String name) 查找名称为 name 的类，返回的结果是 java.lang.Class 类的实例。 
-+ findLoadedClass(String name) 查找名称为 name 的已经被加载过的类，返回的结果是 java.lang.Class 类的实例。 
-+ defineClass(String name, byte[] b, int off, int len) 把字节数组 b 中的内容转换成 Java 类，返回的结果是 java.lang.Class 类的实例。这个方法被声明为 final 的。     
-+ resolveClass(Class<?> c) 链接指定的 Java 类。    
+        try {
+            Class c1 = cl1.loadClass("Hello");
+            Object object = c1.newInstance();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("main-ClassNotFoundException");
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+```java
+protected Class<?> loadClass(String name, boolean resolve)
+  throws ClassNotFoundException {
+     
+    synchronized (getClassLoadingLock(name)) {
+        // First, check if the class has already been loaded
+        Class<?> c = findLoadedClass(name);
+        if (c == null) {
+            long t0 = System.nanoTime();
+                try {
+                    if (parent != null) {
+                        c = parent.loadClass(name, false);
+                    } else {
+                        c = findBootstrapClassOrNull(name);
+                    }
+                } catch (ClassNotFoundException e) {
+                    // ClassNotFoundException thrown if class not found
+                    // from the non-null parent class loader
+                }
+ 
+                if (c == null) {
+                    // If still not found, then invoke findClass in order
+                    // to find the class.
+                    c = findClass(name);
+                }
+            }
+            if (resolve) {
+                resolveClass(c);
+            }
+            return c;
+        }
+    }
+```
+
+# 实现自定义java.lang.ClassLoader中的关键方法
+
+```java
+public class MyClassLoader extends ClassLoader {
+
+    @Override
+    public Class findClass(String name) {
+        byte[] data = loadClassData(name);
+
+        // 字节流转化为Class类
+        return defineClass(data, 0, data.length);
+    }
+
+    public byte[] loadClassData(String name) {
+        // 根据文件名读取class文件并转换未字节流
+    }
+}
+```
 
 ### 类加载器的Delegate
 
