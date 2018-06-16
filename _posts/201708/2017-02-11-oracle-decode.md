@@ -1,10 +1,10 @@
 ---
 title: Oracle Decode用法
-date: 2017-02-11 18:32:32 Z
-categories:
-- iteye
+categories: [iteye,sql]
 layout: post
+excerpt_separator: <!--more-->
 ---
+oracle decode <!--more-->
 
 from: http://www.adp-gmbh.ch/ora/sql/decode.html 
 

@@ -1,17 +1,17 @@
 ---
 title: 返回奇数行或者偶数行数据库表记录
-date: 2017-02-11 18:32:32 Z
-categories:
-- iteye
+categories: [iteye, sql]
 layout: post
+excerpt_separator: <!--more-->
 ---
+Oracle返回奇数行或者偶数行数据库表记录<!--more-->
 
 ### 方法1用Decode函数 
 ------
 for even number of records 
 
 ```sql
-select * from emp where rowid in (select decode(mod(rownum,2),0,rowid) from emp); 
+select * from emp where rowid in (select decode(mod(rownum,2),0,rowid) from emp);
 ```
 
 for odd number of records 
