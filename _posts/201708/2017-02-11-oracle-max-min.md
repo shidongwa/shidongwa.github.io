@@ -1,12 +1,12 @@
 ---
 title: 不用max函数返回表中最大值或者最小值
-date: 2017-02-11 18:32:32 Z
-categories:
-- iteye
+categories: [iteye,sql]
 layout: post
+excerpt_separator: <!--more-->
 ---
+不用max函数返回表中最大值或者最小值 <!--more-->
 
-返回Test表中字段num的最大值或者最小值（不用Max函数）, 为了好玩。：）   
+返回Test表中字段num的最大值或者最小值（不用Max函数）, 为了好玩。：)
 
 ---
 + 返回最大值 

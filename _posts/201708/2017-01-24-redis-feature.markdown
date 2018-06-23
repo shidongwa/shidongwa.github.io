@@ -1,10 +1,11 @@
 ---
-title: redis特性
+title: redis版本特性
 date: 2017-01-24 23:19:04 Z
 categories:
 - blog
 layout: post
 ---
+Reids各版本特性
 
 ### Redis 4 feature 
 
@@ -14,6 +15,7 @@ layout: post
 * mixed rdb-aof format
 * del/flushall/flushdb async
 * MEMORY command
+* CLUSTER DOCKER/NAT support
 
 ### redis 3
 * Redis Cluster
