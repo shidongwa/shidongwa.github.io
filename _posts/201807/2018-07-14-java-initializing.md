@@ -3,7 +3,9 @@ layout: post
 title: Java 类加载过程中的初始化
 categories: [类加载]
 ---
-Java 类加载过程分为load，link（verify，prepare，resolve），initialising，use，unloading等。其中initialising阶段分为类初始化cinit和实例init的初始化。
+# Java类加载过程中的初始化
+
+Java 类加载过程分为load，link（verify，prepare，resolve），initialising，use，unloading等。其中initialising阶段分为类初始化cinit和实例init的初始化。注意类初始化只会一次，实例初始化会多次。
 
 ## 类初始化
 
@@ -43,6 +45,7 @@ new，反射初始化对象都会触发对象实例的初始化。和类的初�
 
 ```java
 MyClassLoader mcl = new MyClassLoader(); 
+// Class<?> clazz = mcl.loadClass("People"); // 类初始化
 Class<?> clazz = Class.forName("People", true, mcl); // 类初始化
 Object obj = clazz.newInstance(); //实例初始化
 ```
