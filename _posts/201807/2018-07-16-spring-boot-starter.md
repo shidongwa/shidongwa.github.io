@@ -121,7 +121,6 @@ org.springframework.boot.autoconfigure.velocity.VelocityTemplateAvailabilityProv
 org.springframework.boot.autoconfigure.web.JspTemplateAvailabilityProvider
 ```
 
-
 ## enableXXX
 
 也可以不通过spring factory loader，直接应用enableXXX
