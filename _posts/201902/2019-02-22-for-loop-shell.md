@@ -1,3 +1,8 @@
+---
+layout: post
+title: linux shell seq
+categories: [shell]
+---
 
 循环中可以执行与时序相关的shell命令。
 
