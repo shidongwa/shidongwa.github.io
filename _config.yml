@@ -98,14 +98,14 @@ gitment:
     owner: shidongwa
     repo: blog-comments
     oauth:
-        client_id: 8e1cf27261acacb80a6e
-        client_secret: 175d9ed33e3641c9c1bbebffbfda5cc9c41a7223
+        client_id: f91653438a450b7759bc
+        client_secret: b46c6894e64e3e086debead5c9757d98dfbf765b
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: shidongwa
     repo: blog-comments
-    clientID: 8e1cf27261acacb80a6e
-    clientSecret: 175d9ed33e3641c9c1bbebffbfda5cc9c41a7223
+    clientID: f91653438a450b7759bc
+    clientSecret: b46c6894e64e3e086debead5c9757d98dfbf765b
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
