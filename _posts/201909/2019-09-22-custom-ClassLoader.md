@@ -284,20 +284,20 @@ Caused by: java.lang.ClassFormatError: Truncated class file
 
 重现步骤如下
 
-1 git clone https://github.com/shidongwa/demo-hotswap.git
-1 cd demo-hotswap 
-1 mvn clean package
-1 copy demo.war to you workspace
-1 build and move test.jar to /tmp
+1. git clone https://github.com/shidongwa/demo-hotswap.git
+1. cd demo-hotswap 
+1. mvn clean package
+1. copy demo.war to you workspace
+1. build and move test.jar to /tmp
   `jar cvf test.jar com/stone/jdk/demohotswap/swapClass/SwapMe.class`
   `cp test.jar /tmp/`
-1 run demo.war in this way `java -jar demo.war`
-1 access endpoint http://localhost:8080/swap
-1 update SwapMe.java, package and replace test.jar
-1 access endpoint http://localhost:8080/swap again
-1 上面的异常出现
+1. run demo.war in this way `java -jar demo.war`
+1. access endpoint http://localhost:8080/swap
+1. update SwapMe.java, package and replace test.jar
+1. access endpoint http://localhost:8080/swap again
+1. 上面的异常出现
 
-注意：如果以这种方式启动 `java -cp jetty-runner-9.4.14.v20181114.jar org.eclipse.jetty.runner.Runner demo.war` 不会有问题。
+*注意：* 如果以这种方式启动 `java -cp jetty-runner-9.4.14.v20181114.jar org.eclipse.jetty.runner.Runner demo.war` 不会有问题。
 
 ## 问题分析
 比较下面两种jetty启动方式
