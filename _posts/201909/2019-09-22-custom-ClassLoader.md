@@ -283,6 +283,7 @@ Caused by: java.lang.ClassFormatError: Truncated class file
 ```
 
 重现步骤如下
+
 1 git clone https://github.com/shidongwa/demo-hotswap.git
 1 cd demo-hotswap 
 1 mvn clean package
