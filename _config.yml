@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://shidonghua.top
+url: https://shidongwa.github.com
 date_format: "ordinal"
 title: 老实说
 # subtitle: ""
@@ -16,8 +16,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Shi Donghua
-organization: shidonghua.top
-organization_url: https://shidonghua.top
+organization: shidongwa.github.com
+organization_url: https://shidongwa.github.com
 github_username: shidongwa
 location: Shanghai, China
 email: 10189795@qq.com
