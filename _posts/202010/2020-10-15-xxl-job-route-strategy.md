@@ -1,9 +1,9 @@
 ---
 layout: post
 title: xxl-job中选择执行节点路由策略分析
-categories: [xxl-job]
+categories: [分布式job]
 ---
-读xxl-job 源码分析如何选择/路由执行节点。其中一个策略是一致性hash。
+读xxl-job源码分析如何选择/路由执行节点。其中一个策略是一致性hash。
 
 ## 分析
 xxl-job中的一致性hash路由策略还是蛮简单的。根据jobId和执行器地址列表来做路由即可。
