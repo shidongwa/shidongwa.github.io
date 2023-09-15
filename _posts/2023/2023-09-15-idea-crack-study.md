@@ -1,9 +1,10 @@
 ---
 title: JetBrains IDEA破解原理学习
-categories: IDEA
-- blog
+categories: 
+- IDEA
 layout: post
 ---
+## IDEA破解原理学习
 
 # 背景
 
