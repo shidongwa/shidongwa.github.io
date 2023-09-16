@@ -8,7 +8,7 @@ layout: post
 
 # 背景
 
-我下载的 IntelliJ IDEA 2023.2.1 (Ultimate Edition）版本，采用[这篇文章](https://blog.idejihuo.com/jetbrains/intellij-idea-2023-1-3-activation-code-cracking-to-2099.html)中的方式 IDEA 激活到 2099 年。![有图为证](./assets/images/2023091601.png)
+我下载的 IntelliJ IDEA 2023.2.1 (Ultimate Edition）版本，采用[这篇文章](https://blog.idejihuo.com/jetbrains/intellij-idea-2023-1-3-activation-code-cracking-to-2099.html)中的方式 IDEA 激活到 2099 年。![有图为证](../../assets/2023091601.png)
 
 激活的基本思路是采用 Java Agent 技术拦截注册验证逻辑，绕过服务端，告诉客户端自己是合法的。本文主要分析拦截了哪些点，做了什么修改，但是不包括激活注册码的生成。
 
