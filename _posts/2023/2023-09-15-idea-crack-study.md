@@ -15,9 +15,11 @@ layout: post
 # 初步分析
 
 从教程中看核心的一步是增加了 IDEA JVM 启动时参数-javaagent:/Users/[user]/tools/jihuo-tool-2099/active-agt-idea.jar,可以确定采用的是 Java Agent 拦截技术。
+
 ![](https://github.com/shidongwa/shidongwa.github.io/blob/master/images/2023/2023091602.png)
 
 为了搞清楚 Java Agent 中做了什么，使用 JD-GUI 反编译 jihuo-tool-2099 目录下 jar 文件。
+
 ![](https://github.com/shidongwa/shidongwa.github.io/blob/master/images/2023/2023091603.png)
 
 从反编译后的源文件看，使用的是 janetfilter 包。
