@@ -8,20 +8,20 @@ layout: post
 
 # 背景
 
-我下载的 IntelliJ IDEA 2023.2.1 (Ultimate Edition）版本，采用[这篇文章](https://blog.idejihuo.com/jetbrains/intellij-idea-2023-1-3-activation-code-cracking-to-2099.html)中的方式 IDEA 激活到 2099 年。![有图为证](https://files.mdnice.com/user/48760/a9746d84-2a98-4a35-9216-7cce9ce7ed38.png)
+我下载的 IntelliJ IDEA 2023.2.1 (Ultimate Edition）版本，采用[这篇文章](https://blog.idejihuo.com/jetbrains/intellij-idea-2023-1-3-activation-code-cracking-to-2099.html)中的方式 IDEA 激活到 2099 年。![有图为证](./assets/2023091601.png)
 
 激活的基本思路是采用 Java Agent 技术拦截注册验证逻辑，绕过服务端，告诉客户端自己是合法的。本文主要分析拦截了哪些点，做了什么修改，但是不包括激活注册码的生成。
 
 # 初步分析
 
 从教程中看核心的一步是增加了 IDEA JVM 启动时参数-javaagent:/Users/[user]/tools/jihuo-tool-2099/active-agt-idea.jar,可以确定采用的是 Java Agent 拦截技术。
-![](https://files.mdnice.com/user/48760/094db3f4-0f5f-448e-a72d-3bfbcdade10d.png)
+![](./assets/2023091602.png)
 
 为了搞清楚 Java Agent 中做了什么，使用 JD-GUI 反编译 jihuo-tool-2099 目录下 jar 文件。
-![](https://files.mdnice.com/user/48760/35167795-504a-4ef4-954f-99a702c47e37.png)
+![](./assets/2023091603.png)
 
 从反编译后的源文件看，使用的是 janetfilter 包。
-![](https://files.mdnice.com/user/48760/a492a997-af02-4764-9ac2-0cbce9019a8d.png)
+![](./assets/2023091604.png)
 
 从网上搜索了一下，janetfilter 来自https://ja-netfilter.com，来自一位@pengzhile的大佬，但是这个网站貌似已经不能访问了。知乎有一个[大神](https://zhuanlan.zhihu.com/p/494706735)从框架和字节码层面对代码做了比较细致的分析。
 
