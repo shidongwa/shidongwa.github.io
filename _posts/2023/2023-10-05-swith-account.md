@@ -23,6 +23,6 @@ and the repository exists.
 2. 通过`git config --list` 检查user.name是account2，符合预期；
 3. 怀疑mac keychain中缓存问题，清理后无效；
 4. 按照“https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey”检查不符合预期。`ssh-add -l -E sha256` 结果为空；怀疑是这个问题；
-5. 按照“https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent”，关键的一步是```ssh-add --apple-use-keychain ~/.ssh/id_ed25519```
+5. 按照“https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent”，关键的一步是`ssh-add ~/.ssh/id_ed25519`
 
 > Note: The --apple-use-keychain option stores the passphrase in your keychain for you when you add an SSH key to the ssh-agent. If you chose not to add a passphrase to your key, run the command without the --apple-use-keychain option.
