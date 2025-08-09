@@ -7,7 +7,7 @@ comments: true
 menu: 关于
 permalink: /about/
 ---
-Java、Python程序员；AI、Web3实践者；
+Java、Python程序员；AI、Web3实践者；关注远程工作和独立开发
 
 ## 联系
 
