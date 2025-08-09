@@ -4,9 +4,9 @@
 baseurl:
 url: https://shidongwa.github.io/
 date_format: "ordinal"
-title: 老实说
+title: 老实记
 # subtitle: ""
-description: "石头记"
+description: "老实记"
 keywords: Stone, shidongwa, shidonghua, 石东华
 timezone: Asia/Shanghai
 encoding: "utf-8"
